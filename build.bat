@@ -23,7 +23,7 @@ if exist dist rmdir /s /q dist
 if exist __pycache__ rmdir /s /q __pycache__
 
 REM 检查图标文件是否存在
-set "icon_path=assets\app_icon.png"
+set "icon_path=assets\app_icon.ico"
 if not exist "%icon_path%" (
     echo 警告: 图标文件 "%icon_path%" 不存在，将使用默认图标
     set "icon_param="

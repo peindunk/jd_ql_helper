@@ -65,7 +65,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         # 设置应用图标
-        icon = QIcon('assets/app_icon.png')
+        icon = QIcon('assets/app_icon.ico')
         self.setWindowIcon(icon)
         
         # 初始化各个管理器
