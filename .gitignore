@@ -1,0 +1,67 @@
+# Python相关忽略项
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 虚拟环境
+venv/
+env/
+ENV/
+.env
+.venv
+
+# 测试相关
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# IDE相关
+.idea/
+.vscode/
+*.swp
+*.swo
+.project
+.pydevproject
+.settings/
+
+# 操作系统相关
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+*.log
+
+# 项目特定忽略项
+database/*.db
+config/local_settings.py
+
+# 构建相关
+*.spec
+nuitka-crash-report.xml
+*.pyd
+*.exe
+*.dll
+*.manifest
+*.ico
+
+# 其他
+.history/
+.hypothesis/
