@@ -3,15 +3,20 @@
 一个用于获取京东Cookie并同步到青龙面板的图形化工具
 
 ## 项目结构
-
 ```
-├── core/           # 核心功能模块
-├── utils/          # 工具类和辅助函数
-├── ui/             # 用户界面相关组件
-├── config/         # 配置文件
-├── database/       # 数据库相关文件
-├── assets/         # 静态资源文件
-└── docs/           # 项目文档
+├── core/ # 核心功能模块 │ 
+├── cookie_manager.py # Cookie管理 │ 
+├── qinglong_panel.py # 青龙面板接口 
+│ └── web_view_manager.py # WebView管理 
+├── database/ # 数据库相关文件 
+│ └── models.py # 数据模型 
+├── assets/ # 静态资源文件 
+│ └── app_icon.png # 应用图标 
+├── about/ # 关于信息 │ 
+├── about.txt # 关于文本 │  
+├── main.py # 主程序入口 
+├── build.py # Nuitka打包脚本 
+└── build.bat # PyInstaller打包脚本
 ```
 
 
