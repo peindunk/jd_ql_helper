@@ -143,8 +143,7 @@ class QinglongPanel:
             json=[{
                 'name': name,
                 'value': value,
-                'remarks': remarks,
-                'status': 0  # 设置为启用状态
+                'remarks': remarks
             }]
         )
         
