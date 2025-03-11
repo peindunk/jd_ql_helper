@@ -5,6 +5,7 @@ from PyQt6.QtCore import QObject, pyqtSignal
 from PyQt6.QtWebEngineCore import QWebEngineProfile
 from PyQt6.QtNetwork import QNetworkCookie
 from database.models import init_db
+from urllib.parse import unquote
 
 class CookieManager(QObject):
     cookies_updated = pyqtSignal(str)
@@ -40,6 +41,9 @@ class CookieManager(QObject):
         if '.jd.com' in domain:
             name = cookie.name().data().decode()
             value = cookie.value().data().decode()
+            # 对Cookie值进行URL解码
+            if name == 'pt_pin':
+                value = unquote(value)
             self.cookies[name] = value
             self.update_cookie_text()
             self.check_login_status(None)
@@ -70,6 +74,9 @@ class CookieManager(QObject):
                 for cookie_item in cookie_str.split('; '):
                     if '=' in cookie_item:
                         name, value = cookie_item.split('=', 1)
+                        # 对pt_pin进行URL解码
+                        if name == 'pt_pin':
+                            value = unquote(value)
                         self.cookies[name] = value
                         # 将Cookie添加到WebView的CookieStore中
                         cookie = QNetworkCookie(name.encode(), value.encode())
